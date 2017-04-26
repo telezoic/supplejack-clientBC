@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
   lng: -96.24023437500001,
   zoom: 5,
   minZoom: 2,
-  maxZoom: 15,
+  maxZoom: 18,
   //stores geo_bbox data in format expected by updateParams action
   boundingBox: {
     geo_bbox: '0,0,0,0'
