@@ -13,7 +13,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "fastboot": "PORT=8000 node fastboot-server.js"
+    "fastboot": "PORT=8001 node fastboot-server.js"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
