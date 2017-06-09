@@ -38,6 +38,8 @@ $main-width: 1000px;
 //HEADER
 
 #site-title {
+  display: flex;
+  min-height: 75px;
   > * {
     display: flex;
     align-items: center;
