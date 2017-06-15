@@ -4,9 +4,9 @@ export default Ember.Controller.extend({
   search: Ember.inject.controller('search'),
   queryParams: ['lat', 'lng', 'zoom'],
   //leaflet variables - should eventually be moved to new controller
-  lat: 53.014783245859235,
-  lng: -96.24023437500001,
-  zoom: 5,
+  lat: 52.496,
+  lng: -124.211,
+  zoom: 6,
   minZoom: 2,
   maxZoom: 18,
   //stores geo_bbox data in format expected by updateParams action
