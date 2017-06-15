@@ -40,6 +40,7 @@ $main-width: 1000px;
 #site-title {
   display: flex;
   min-height: 75px;
+  margin-bottom: $margin-wide;
   > * {
     display: flex;
     align-items: center;
