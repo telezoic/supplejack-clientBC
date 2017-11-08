@@ -23,6 +23,7 @@ export default Ember.Controller.extend({
   facetFields: {
     'display_content_partner' : {show: 'all'},
     'subject' : {show: 'none'},
+    'category' : {show: 'none'},
     'language' : {show: 'none'}
   },
 
