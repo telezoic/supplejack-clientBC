@@ -18,13 +18,14 @@ module.exports = function(environment) {
       }
     },
 
-    APP: {
+APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-    fastboot: {
-          hostWhitelist: [/^localhost:\d+$/, 'eln-sj4.is.sfu.ca:8001']
-    }
+    // remove the whiteist errors by adding your server port below
+    //fastboot: {
+    //      hostWhitelist: [/^localhost:\d+$/, 'WEBSERVER-PORT-HERE']
+   // }
   };
 
   if (environment === 'development') {
@@ -45,12 +46,9 @@ module.exports = function(environment) {
     */
 
     //VARIABLES FOR LOCAL SUPPLEJACK DATASET
-    //ENV.APP.host = 'http://192.168.99.100:3000';
-    //ENV.APP.host = 'http://138.197.71.234:3000';
-    ENV.APP.host = 'http://eln-sj3.is.sfu.ca:3000';
+    ENV.APP.host = 'YOUR-SJ-IP-HERE:3000';
     ENV.APP.namespace = '';
-    //ENV.APP.api_key = 'Fan4zyF2ecpVu3C2uAr8';
-    ENV.APP.api_key = 'dy4NuPygNf_GxWxvvG3_';
+    ENV.APP.api_key = 'YOUR-APIKEY-HERE';
     ENV.APP.primaryKey = 'record_id';
     ENV.APP.searchFields = 'default';
     ENV.APP.resultFields = 'all';
