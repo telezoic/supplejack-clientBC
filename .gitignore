@@ -17,4 +17,4 @@ npm-debug.log*
 testem.log
 
 # security
-/config/environment.js
+#/config/environment.js
