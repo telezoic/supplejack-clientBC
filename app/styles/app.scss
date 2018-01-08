@@ -1,7 +1,6 @@
 //redefine bootstrap defaults
 $text-muted: lightgray;
 $screen-xl: 1400px;
-$brand-primary: #0268a5;
 
 @import "ember-bootstrap/bootstrap";
 
@@ -10,6 +9,7 @@ $margin-standard: 10px;
 $margin-wide: (2 * $margin-standard);
 $margin-nav-height: 40px; //equal in height to the nav tabs, good for top of aside
 $indent-standard: 20px;
+$image-width-title: 50px;
 $image-width: 150px;
 $image-placeholder: '/assets/thumb_placeholder.gif';
 $aside-width: 260px;
@@ -37,28 +37,45 @@ $main-width: 1000px;
 //-----STYLE-----
 //HEADER
 
+header {
+    float: left;
+    top: 0;
+    margin:0 0 39px 0;
+    padding: 10px 0 0 0 ;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #e6f7ff, #1d7db5);
+
+
+    border-bottom: solid lightgrey .75px;
+    border-radius:  4px;
+  }
+
+
 #site-title {
-  display: flex;
   min-height: 75px;
-  margin-bottom: $margin-wide;
+  display:flex;
   > * {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     text-decoration: none;
+
+    #title-img-container {
+      max-width: $image-width-title;
+      margin-left:$margin-standard;
+      margin-bottom: 8px;
+      border-radius:  4px;
+      img {width: 514%;}
+    }
     #title-text-container {
       flex-grow: 1;
-      > img {
-        width: ($aside-width - (2*$margin-standard));
-        margin-left: ($margin-standard - 2px);
-      }
       > * {
         font-weight: bold;
         margin: 0;
-        margin-left: $margin-standard;
       }
       h1 {
-        margin-top: 15px;
+        margin-top: 0px;
         font-size: 32px;
         line-height: 70%;
       }
@@ -67,8 +84,9 @@ $main-width: 1000px;
         margin-bottom: 30px;
       }
       .subtitle {
-        margin-top: 3px;
-        font-size: 19px;
+        margin-top: 10px;
+        margin-left: 100px;
+        font-size: 7px;
         line-height: 90%;
       }
     }
@@ -81,6 +99,7 @@ $main-width: 1000px;
     border-radius: 0;
     &:focus{
       text-decoration: none;
+      margin-top: 10px;
     }
   }
 }
@@ -119,6 +138,12 @@ aside{
     padding: 0;
     a {&:hover{text-decoration:none;}}
     li.facet-category{
+    background-color: #e6f7ff;
+    border-top: solid lightgrey .65px;
+    border-left: solid lightgrey .65px;
+    border-right: solid lightgrey .65px;
+    border-bottom: solid lightgrey .5px;
+    border-radius:  4px;
       .facet-link {
         text-indent: -$indent-standard;
         margin-left: $indent-standard;
@@ -128,11 +153,13 @@ aside{
       }
     }
     ul.facet-items{
+  
       list-style-type: none;
       padding: 0 $margin-standard;
     }
     .facet-category-name{
       font-weight: bold;
+      padding: 0 $margin-standard;
     }
   }
 }
@@ -200,6 +227,7 @@ img.placeholder{content: url($image-placeholder);}
 //RESULT
 //text
 img.result-thumbnail{
+
   margin-left: auto;
   margin-right: auto;
   width: $aside-width;
@@ -264,6 +292,7 @@ footer{
   margin-bottom: $margin-standard;
 }
 div#body-container{
+
   flex:1 0 auto;
   display:flex;
   justify-content: center;
@@ -283,11 +312,17 @@ div#body-container{
     order:-1;
   }
   .search-result{
+
     display:flex;
+   
+   
+    border-bottom: solid lightgrey .65px;
+    border-radius: 4px;
     .search-thumbnail{
       order: -1;
     }
     .search-text{
+
       flex: 1;
     }
   }

@@ -51,8 +51,8 @@ export default {
     "toggle" : {
       "hide" : "Hide filters",
       "show" : "Show filters",
-      "seeMore" : "+ see more",
-      "seeLess" : "- see less",
+      "seeMore" : "more &#x25BC;",
+      "seeLess" : "less &#x25B2;",
     },
     "remove" : "remove"
   },
